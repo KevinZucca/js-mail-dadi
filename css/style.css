@@ -1,3 +1,34 @@
-#dice-game select {
-    width: 100px;
+
+#user-data input {
+    max-width: 300px;
 }
+
+
+
+
+#dice-game {
+    background-color: #3e497e;
+    color: white;
+    border-radius: 30px;
+}
+
+#dice-game button {
+    color: rgb(54, 30, 147);
+    font-weight: bold;
+    background-color: #8fe6f9;
+    border: none;
+    width: 100px;
+    border-radius: 50px;
+}
+
+#results-container {
+    background-color: #ebe3cc;
+}
+
+#results-container i {
+    display: none;
+    font-size: 150px;
+    padding: 20px;
+}
+
+

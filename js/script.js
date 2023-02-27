@@ -64,19 +64,34 @@ let botChoiceElements = [1, 2, 3, 4, 5, 6 ];
 let userNumberEl = document.querySelectorAll(".user-number");
 let playButtonEl = document.getElementById("dice-button");
 
+let botResultEl = document.getElementById("bot-result");
+let userResultEl = document.getElementById("user-result");
+let gamerColumn = document.getElementById("gamer-column");
+let botColumn = document.getElementById("bot-column");
+let resultGameTextEl = document.getElementById("result-game-text");
+
+
+
 
 playButtonEl.addEventListener("click", function() {
 
-for (let i = 1; i < botChoiceElements.length; i++) {
-    let botNumber = Math.floor (Math.random() * botChoiceElements[i] + 1);
+    let botNumber = Math.floor (Math.random() * botChoiceElements.length);
+    let userNumberEl = Math.floor (Math.random() * botChoiceElements.length);
 
-    if (botNumber < parseInt(userNumberEl.innerText)) {
-        console.log("Il computer ha scelto: " + botNumber + ". hai vinto la scommessa"); 
-    } else if (botNumber > parseInt(userNumberEl.innerText)) {
-        console.log("Il computer ha scelto: " + botNumber + ". hai perso la scommessa");
-    } else if (botNumber === parseInt(userNumberEl.innerText)) {
-        console.log("Il computer ha scelto: " + botNumber + ". è un pareggio");
+    
+    if (botNumber < userNumberEl) {  
+        botResultEl.innerText = `Il bot ha: ${botNumber + 1}`;
+        userResultEl.innerText = `Tu hai ${userNumberEl + 1}`;
+        resultGameTextEl.innerText = "Hai perso la scommessa";
+    } else if (botNumber > userNumberEl) {
+        botResultEl.innerText = `Il bot ha: ${botNumber + 1}`;
+        userResultEl.innerText = `Tu hai ${userNumberEl + 1}`;
+        resultGameTextEl.innerText = "Hai vinto la scommessa";
+    } else if (botNumber === userNumberEl) {
+        botResultEl.innerText = `Il bot ha: ${botNumber + 1}`;
+        userResultEl.innerText = `Tu hai ${userNumberEl + 1}`;
+        resultGameTextEl.innerText = "E' un pareggio";
     }
-    }   
+
 });
     
