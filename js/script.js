@@ -50,3 +50,33 @@ checkButtonEl.addEventListener("click", function() {
 
 //DICE GAME
 /* creare un menù a tendina per permettere all'utente di scegliere il numero del dado
+   creare un pulsante per dare l'ok alla partita 
+   crearo un array dal quale il computer sceglierà in maniera random un numero
+   creare un ciclo con il quale il computer percorrerà l'intero array e sceglierà un numero random
+   ?SE l'utente ha scelto un numero più alto del computer 
+     ° visualizza "hai vinto la scommessa"
+   :ALTRIMENTI
+     °visualizza "hai perso la scommessa"
+*/
+
+
+let botChoiceElements = [1, 2, 3, 4, 5, 6 ];
+let userNumberEl = document.querySelectorAll(".user-number");
+let playButtonEl = document.getElementById("dice-button");
+
+
+playButtonEl.addEventListener("click", function() {
+
+for (let i = 1; i < botChoiceElements.length; i++) {
+    let botNumber = Math.floor (Math.random() * botChoiceElements[i] + 1);
+
+    if (botNumber < parseInt(userNumberEl.innerText)) {
+        console.log("Il computer ha scelto: " + botNumber + ". hai vinto la scommessa"); 
+    } else if (botNumber > parseInt(userNumberEl.innerText)) {
+        console.log("Il computer ha scelto: " + botNumber + ". hai perso la scommessa");
+    } else if (botNumber === parseInt(userNumberEl.innerText)) {
+        console.log("Il computer ha scelto: " + botNumber + ". è un pareggio");
+    }
+    }   
+});
+    
