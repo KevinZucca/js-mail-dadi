@@ -3,13 +3,19 @@
     max-width: 300px;
 }
 
+#check-button {
+    background-color: #7c81e2;
+    color: white;
+    border: none;
+}
+
 
 
 
 #dice-game {
     background-color: #3e497e;
     color: white;
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
 }
 
 #dice-game button {
@@ -23,7 +29,9 @@
 
 #results-container {
     background-color: #ebe3cc;
+    padding-top: 30px;
 }
+
 
 #results-container i {
     display: none;

@@ -81,15 +81,15 @@ playButtonEl.addEventListener("click", function() {
     
     if (botNumber < userNumberEl) {  
         botResultEl.innerText = `Il bot ha: ${botNumber + 1}`;
-        userResultEl.innerText = `Tu hai ${userNumberEl + 1}`;
+        userResultEl.innerText = `Tu hai: ${userNumberEl + 1}`;
         resultGameTextEl.innerText = "Hai perso la scommessa";
     } else if (botNumber > userNumberEl) {
         botResultEl.innerText = `Il bot ha: ${botNumber + 1}`;
-        userResultEl.innerText = `Tu hai ${userNumberEl + 1}`;
+        userResultEl.innerText = `Tu hai: ${userNumberEl + 1}`;
         resultGameTextEl.innerText = "Hai vinto la scommessa";
     } else if (botNumber === userNumberEl) {
         botResultEl.innerText = `Il bot ha: ${botNumber + 1}`;
-        userResultEl.innerText = `Tu hai ${userNumberEl + 1}`;
+        userResultEl.innerText = `Tu hai: ${userNumberEl + 1}`;
         resultGameTextEl.innerText = "E' un pareggio";
     }
 
